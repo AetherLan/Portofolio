@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ridho - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body class="text-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 backdrop-enhanced">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 border-gray-800 border-b">
+            <div class="flex items-center justify-between">
+                <div class="logo-n animate__animated animate__fadeInDown">R</div>
+
+                <!-- Improved hamburger menu button -->
+                <button
+                    class="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-white rounded-md"
+                    id="mobile-menu-btn" aria-label="Toggle mobile menu">
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+
+                <div class="hidden md:flex space-x-6 lg:space-x-8">
+                    <a href="#about"
+                        class="hover:text-gray-300 transition-colors text-sm lg:text-base animate__animated animate__fadeInDown animate__delay-1s">Tentang Saya</a>
+                    <a href="#service"
+                        class="hover:text-gray-300 transition-colors text-sm lg:text-base animate__animated animate__fadeInDown animate__delay-1s">Sertifikasi</a>
+                    <a href="#project"
+                        class="hover:text-gray-300 transition-colors text-sm lg:text-base animate__animated animate__fadeInDown animate__delay-1s">Pengalaman</a>
+                    <a href="#contact"
+                        class="hover:text-gray-300 transition-colors text-sm lg:text-base animate__animated animate__fadeInDown animate__delay-1s">Download CV</a>
+                </div>
+                <div class="hidden md:block text-sm animate__animated animate__fadeInDown animate__delay-1s">
+                    <a href="#contact" class="flex items-center gap-2">
+                        More About Me
+                        <span class="w-7 h-7 rounded-full border border-gray-300 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right ">
+                                <path d="M7 7h10v10" />
+                                <path d="M7 17 17 7" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Improved mobile menu -->
+        <div class="mobile-menu fixed top-0 right-0 h-full md:hidden" id="mobile-menu">
+            <div class="flex flex-col h-full px-6 py-8">
+                <button
+                    class="self-end text-white mb-6 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-white rounded-md"
+                    id="close-menu-btn" aria-label="Close mobile menu">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+                <div class="flex-1 flex flex-col justify-center space-y-6">
+                    <a href="#about" class="text-center animate__animated animate__fadeInRight">Tentang Saya</a>
+                    <a href="#service"
+                        class="text-center animate__animated animate__fadeInRight animate__delay-1s">Sertifikasi</a>
+                    <a href="#project"
+                        class="text-center animate__animated animate__fadeInRight animate__delay-2s">Pengalaman</a>
+                    <a href="#contact"
+                        class="text-center animate__animated animate__fadeInRight animate__delay-3s">Download CV</a>
+                </div>
+            </div>
+        </div>
+        <!-- Overlay for mobile menu -->
+        <div class="overlay" id="overlay"></div>
+    </nav>
+
+    <!-- Hero Section with improved responsiveness and animations -->
+    <section class="min-h-screen flex items-center pt-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-gray-900/20"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
+            <div class="text-center lg:text-left order-2 lg:order-1">
+                <p class="text-gray-400 mb-4 text-sm sm:text-base animate__animated animate__fadeInLeft">Hello Everyone
+                </p>
+                <h1
+                    class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 gradient-text animate__animated animate__zoomIn animate__delay-1s">
+                    Saya Ridho Hafidz Indra Prasetyo</h1>
+                <p
+                    class="text-gray-300 text-base sm:text-lg mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0 animate__animated animate__fadeInUp animate__delay-2s">
+                    Saya Ridho Hafidz Indra Prasetyo S.Tr.T
+                    Lahir 23 Agustus 2002 dan merupakan lulusan teknik sipil program studi teknologi rekayasa konstruksi jalan dan jembatan
+                    berpengalaman perencanaan dan mendesain kontruksi jalan dan jembatan.
+                    Terampil dalam penggunaan Microsoft Office, SAP 2000, AutoCad, CorelDraw,
+                    Figma serta memiliki pengalam dalam akademik dan publikasi ilmiah. Mampu
+                    beradaptasi dengan perkembangan teknologi untuk meningkatkan efisiensi dan
+                    evektivitas kerja
+                </p>
+                <button
+                    class="bg-white text-black px-6 sm:px-8 py-3 rounded-full font-medium hover:bg-gray-200 transition-colors glow-effect animate__animated animate__bounceIn animate__delay-3s">
+                    More About Me
+                </button>
+            </div>
+            <div class="relative flex justify-center lg:justify-end order-1 lg:order-2">
+                <div
+                    class="w-64 sm:w-80 md:w-96 h-80 sm:h-96 md:h-[28rem] bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden glow-effect animate__animated animate__fadeInRight">
+                    <img src="img/pp1.jpg" alt="Yaziddev" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -right-2 sm:right-4 md:right-6 top-1/2 transform -translate-y-1/2 space-y-4">
+                    <a href="https://github.com/AetherLan" target="_blank">
+                        <div
+                            class="w-8 sm:w-10 h-8 sm:h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors cursor-pointer animate__animated animate__fadeInRight animate__delay-1s mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-github-icon lucide-github">
+                                <path
+                                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                                <path d="M9 18c-4.51 2-5-2-7-2" />
+                            </svg>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/ridho-hafidz/" target="_blank">
+                        <div
+                            class="w-8 sm:w-10 h-8 sm:h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors cursor-pointer animate__animated animate__fadeInRight animate__delay-2s mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-linkedin-icon lucide-linkedin">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                <rect width="4" height="12" x="2" y="9" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/ridhohafidz02/" target="_blank">
+                        <div
+                            class="w-8 sm:w-10 h-8 sm:h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors cursor-pointer animate__animated animate__fadeInRight animate__delay-3s">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-16 sm:py-20 section-bg animate__animated animate__fadeInUp">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+
+                <!-- LEFT: Title -->
+                <div class="text-center lg:text-left">
+                    <p class="text-gray-400 mb-4">Pendidikan</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-6">
+                        Teknik Sipil - Program Studi Teknologi Rekayasa Konstruksi Jalan dan Jembatan
+                    </h2>
+
+                    <p class="text-gray-300 leading-relaxed">
+                        <span class="font-semibold text-white">GPA: 3.73 / 4.00</span>
+                    </p>
+                    <p class="text-gray-400 mt-2">
+                        2021 - 2025
+                    </p>
+                </div>
+
+                <!-- RIGHT: Institution + Logo -->
+                <div class="flex justify-center lg:justify-end">
+                    <div class="flex items-center gap-4 bg-gray-800 p-5 rounded-xl shadow-lg w-fit">
+                        <!-- LOGO -->
+                        <img src="assets/poltekba.png" alt="University Logo" class="w-16 h-16 object-contain">
+
+                        <!-- TEXT -->
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">
+                                Politeknik Negeri Balikpapan
+                            </h3>
+                            <p class="text-gray-400 text-sm">
+                                Teknik Sipil
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="service" class="py-16 sm:py-20 relative animate__animated animate__fadeInUp">
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-gray-900/10 to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-8 sm:mb-12 text-center lg:text-left">
+                Spesialis Fokus Project
+            </h2>
+            <p class="text-gray-400 mb-8 sm:mb-12 max-w-2xl text-center lg:text-left mx-auto lg:mx-0">
+                Saya fokus pada beberapa keahlian utama untuk memberikan hasil terbaik dalam proyek teknik sipil yang
+                Anda butuhkan.
+            </p>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+                <!-- Pengawas Lapangan -->
+                <div
+                    class="bg-gray-900 p-6 sm:p-8 rounded-2xl hover:bg-gray-800 transition-colors glow-effect animate__animated animate__zoomIn animate__delay-1s">
+                    <div
+                        class="w-12 sm:w-16 h-12 sm:h-16 rounded-xl bg-white/10 text-white text-xl sm:text-2xl font-bold flex items-center justify-center mb-4 sm:mb-6 mx-auto sm:mx-0">
+                        01
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-semibold mb-4 text-center sm:text-left">
+                        Pengawas Lapangan Proyek
+                    </h3>
+                    <p class="text-gray-400 text-center sm:text-left">
+                        Pengawasan pekerjaan konstruksi di lapangan untuk memastikan pekerjaan sesuai gambar dan
+                        spesifikasi.
+                    </p>
+                </div>
+
+                <!-- AutoCAD -->
+                <div
+                    class="bg-gray-900 p-6 sm:p-8 rounded-2xl hover:bg-gray-800 transition-colors glow-effect animate__animated animate__zoomIn animate__delay-2s">
+                    <div
+                        class="w-12 sm:w-16 h-12 sm:h-16 rounded-xl bg-white/10 text-white text-xl sm:text-2xl font-bold flex items-center justify-center mb-4 sm:mb-6 mx-auto sm:mx-0">
+                        02
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-semibold mb-4 text-center sm:text-left">
+                        Drafting AutoCAD
+                    </h3>
+                    <p class="text-gray-400 text-center sm:text-left">
+                        Membuat gambar kerja dan shop drawing dengan standar konstruksi yang akurat dan detail.
+                    </p>
+                </div>
+
+                <!-- SAP2000 & SketchUp -->
+                <div
+                    class="bg-gray-900 p-6 sm:p-8 rounded-2xl hover:bg-gray-800 transition-colors glow-effect sm:col-span-2 lg:col-span-1 animate__animated animate__zoomIn animate__delay-3s">
+                    <div
+                        class="w-12 sm:w-16 h-12 sm:h-16 rounded-xl bg-white/10 text-white text-xl sm:text-2xl font-bold flex items-center justify-center mb-4 sm:mb-6 mx-auto sm:mx-0">
+                        03
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-semibold mb-4 text-center sm:text-left">
+                        SAP2000 & SketchUp Modeling
+                    </h3>
+                    <p class="text-gray-400 text-center sm:text-left">
+                        Analisis struktur menggunakan SAP2000 dan pemodelan 3D menggunakan SketchUp.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+<section class="py-20 section-bg animate__animated animate__fadeInUp">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-8 sm:mb-12 text-center lg:text-left">
+                Sertifikasi Kompetensi
+            </h2>
+
+            <p class="text-gray-400 mb-10 max-w-2xl text-center lg:text-left mx-auto lg:mx-0">
+                Berikut adalah sertifikasi kompetensi profesional yang telah saya peroleh sebagai bukti keahlian dan
+                kemampuan dalam bidang teknik sipil.
+            </p>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+                <!-- Sertifikasi 1 -->
+                <div class="bg-gray-900 p-6 sm:p-8 rounded-2xl hover:bg-gray-800 transition-colors glow-effect animate__animated animate__zoomIn">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white/10 mb-6 mx-auto sm:mx-0">
+                        <div class="">
+                            <!-- Ganti dengan path gambar Anda -->
+                            <img src="img/skk lvl 2.jpg" alt="Pelaksana Lapangan Pekerjaan Jalan">
+                        </div>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-semibold mb-2">Pelaksana Lapangan Pekerjaan Jalan Level 2</h3>
+                    <p class="text-gray-400 text-sm mb-4">BNSP - LSP Astekindo Konstruksi Mandiri</p>
+
+                    <a href="https://drive.google.com/file/d/1qlfHdEbomFoPYjUACXmRWItTB6aAP-lx/view?usp=drivesdk" target="_blank" class="text-blue-400 hover:text-blue-300 text-sm">
+                        Lihat Sertifikat →
+                    </a>
+                </div>
+
+                <!-- Sertifikasi 2 -->
+                <div class="bg-gray-900 p-6 sm:p-8 rounded-2xl hover:bg-gray-800 transition-colors glow-effect animate__animated animate__zoomIn animate__delay-1s">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white/10 mb-6 mx-auto sm:mx-0">
+                        <div class="">
+                            <!-- Ganti dengan path gambar Anda -->
+                            <img src="img/skk lvl3.jpg" alt="Juru Ukur Surveyor">
+                        </div>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-semibold mb-2">Juru Ukur (Surveyor) Level 3</h3>
+                    <p class="text-gray-400 text-sm mb-4">BNSP - LSP Tenaga Konstruksi Nasional</p>
+
+                    <a href="https://drive.google.com/file/d/1Z2n3NJEVTOBxHBDyrWSRfSQ0OVuyiDbd/view?usp=drivesdk" target="_blank" class="text-blue-400 hover:text-blue-300 text-sm">
+                        Lihat Sertifikat →
+                    </a>
+                </div>
+
+                <!-- Sertifikasi 3 -->
+                <div class="bg-gray-900 p-6 sm:p-8 rounded-2xl hover:bg-gray-800 transition-colors glow-effect animate__animated animate__zoomIn animate__delay-2s">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white/10 mb-6 mx-auto sm:mx-0">
+                        <div class="">
+                            <!-- Ganti dengan path gambar Anda -->
+                            <img src="img/skk lvl6.jpg" alt="Perkerasan Jalan Beton">
+                        </div>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-semibold mb-2">Pelaksana Lapangan Perkerasan Jalan Beton Level 6</h3>
+                    <p class="text-gray-400 text-sm mb-4">BNSP - LSP Bina Konstruksi Nusantara</p>
+
+                    <a href="https://drive.google.com/file/d/1EUyH6XGtk4wNK7Xtvc4p82s7qJU1jTip/view?usp=drivesdk" target="_blank" class="text-blue-400 hover:text-blue-300 text-sm">
+                        Lihat Sertifikat →
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+ <section class="py-20 relative animate__animated animate__fadeInUp">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-20 left-10 w-32 h-32 border border-white rounded-full animate__animated animate__pulse animate__infinite"></div>
+            <div class="absolute bottom-20 right-10 w-24 h-24 border border-white rounded-full animate__animated animate__pulse animate__infinite animate__delay-2s"></div>
+            <div class="absolute top-1/2 left-1/4 w-16 h-16 border border-white rounded-full animate__animated animate__pulse animate__infinite animate__delay-1s"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <h2 class="text-4xl font-bold mb-12 text-center">Skills Teknik Sipil yang Dikuasai</h2>
+            <p class="text-gray-400 mb-12 max-w-2xl mx-auto text-center">
+                Selama bertahun-tahun, saya telah mengembangkan keahlian dalam berbagai bidang teknik sipil yang memungkinkan saya untuk merancang dan mengelola proyek konstruksi yang berkualitas tinggi.
+            </p>
+            
+            <div class="md:grid md:grid-cols-3 lg:grid-cols-5 gap-8">
+                <!-- Skill 1: AutoCAD -->
+                <div class="skill-container animate__animated animate__flipInX animate__delay-1s">
+                    <div class="w-20 h-20 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors glow-effect p-4 border border-white">
+                        <img src="img/autocad-seeklogo.png" viewBox="0 0 640 640" width="40" height="40">
+                            <path fill="#ffffff" d="M320 168.5C491.4 168.5 623.2 240.7 623.2 320C623.2 399.3 491.3 471.5 320 471.5C148.6 471.5 16.8 399.3 16.8 320C16.8 240.7 148.7 168.5 320 168.5zM320 151.7C143.3 151.7 0 227 0 320C0 413 143.3 488.3 320 488.3C496.7 488.3 640 413 640 320C640 227 496.7 151.7 320 151.7zM218.2 306.5C210.3 347 182.4 342.8 148.1 342.8L161.8 272.2C199.8 272.2 225.6 268.1 218.2 306.5zM97.4 414.3L134.1 414.3L142.8 369.5C183.9 369.5 209.4 372.5 233 350.4C259.1 326.4 265.9 283.7 247.3 262.3C237.6 251.1 222 245.6 200.8 245.6L130.1 245.6L97.4 414.3zM283.1 200.7L319.6 200.7L310.9 245.5C342.4 245.5 371.6 243.2 385.7 256.2C400.5 269.8 393.4 287.2 377.4 369.3L340.4 369.3C355.8 289.9 358.7 283.3 353.1 277.3C347.7 271.5 335.4 272.7 305.7 272.7L286.9 369.3L250.4 369.3L283.1 200.7zM505 306.5C497 347.6 468.3 342.8 434.9 342.8L448.6 272.2C486.8 272.2 512.4 268.1 505 306.5zM384.2 414.3L421 414.3L429.7 369.5C472.9 369.5 496.8 372 519.9 350.4C546 326.4 552.8 283.7 534.2 262.3C524.5 251.1 508.9 245.6 487.7 245.6L417 245.6L384.2 414.3z"/>
+                        </svg>
+                    </div>
+                    <div class="skill-name">AutoCAD</div>
+                    <div class="skill-level">Lanjutan</div>
+                </div>
+                
+                <!-- Skill 2: SAP2000 -->
+                <div class="skill-container animate__animated animate__flipInX animate__delay-2s">
+                    <div class="w-20 h-20 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors glow-effect p-4 border border-white">
+                        <img src="assets/SAP2000-Icon-by-MASTERkreatif.png" viewBox="0 0 640 640" width="40" height="40">
+                            <path fill="#ffffff" d="M482.2 241.2C476.8 239.4 471.4 237.7 466 236.1C466.9 232.4 467.7 228.7 468.5 225C480.8 165.4 472.7 117.5 445.4 101.7C419.1 86.6 376.2 102.3 332.8 140.1C328.5 143.8 324.3 147.7 320.3 151.6C317.6 149 314.8 146.4 312 143.9C266.5 103.5 220.9 86.5 193.6 102.4C167.4 117.6 159.6 162.7 170.6 219.1C171.7 224.7 172.9 230.2 174.3 235.8C167.9 237.6 161.6 239.6 155.7 241.7C102.3 260.2 64 289.4 64 319.6C64 350.8 104.8 382.1 160.3 401.1C164.8 402.6 169.3 404.1 173.9 405.4C172.4 411.4 171.1 417.3 169.9 423.4C159.4 478.9 167.6 522.9 193.8 538C220.8 553.6 266.2 537.6 310.4 498.9C313.9 495.8 317.4 492.6 320.9 489.2C325.3 493.5 329.9 497.6 334.5 501.6C377.3 538.4 419.6 553.3 445.7 538.2C472.7 522.6 481.5 475.3 470.1 417.7C469.2 413.3 468.2 408.8 467.1 404.2C470.3 403.3 473.4 402.3 476.5 401.3C534.2 382.2 576 351.3 576 319.6C576 289.3 536.6 259.9 482.2 241.2zM346.9 156.3C384.1 123.9 418.8 111.2 434.6 120.3C451.5 130 458 169.2 447.4 220.7C446.7 224.1 446 227.4 445.1 230.7C422.9 225.7 400.4 222.1 377.8 220.1C364.8 201.5 350.6 183.7 335.2 167C339.1 163.3 342.9 159.8 346.9 156.3zM231.2 371.5C236.3 380.2 241.5 388.9 247 397.4C231.4 395.7 215.9 393.2 200.6 389.9C205 375.5 210.5 360.6 216.9 345.4C221.5 354.2 226.2 362.9 231.2 371.5zM200.9 251.2C215.3 248 230.6 245.4 246.5 243.4C241.2 251.7 236 260.2 231.1 268.8C226.2 277.3 221.4 286 216.9 294.8C210.6 279.9 205.3 265.3 200.9 251.2zM228.3 320.1C234.9 306.3 242.1 292.8 249.7 279.5C257.3 266.2 265.5 253.3 274.1 240.6C289.1 239.5 304.4 238.9 320 238.9C335.6 238.9 351 239.5 365.9 240.6C374.4 253.2 382.5 266.1 390.2 279.3C397.9 292.5 405.1 306 411.9 319.7C405.2 333.5 398 347.1 390.3 360.5C382.7 373.8 374.6 386.7 366.1 399.5C351.2 400.6 335.7 401.1 320 401.1C304.3 401.1 289.1 400.6 274.4 399.7C265.7 387 257.5 374 249.8 360.7C242.1 347.4 235 333.9 228.3 320.1zM408.9 371.3C414 362.5 418.8 353.6 423.5 344.6C429.9 359.1 435.5 373.8 440.4 388.9C424.9 392.4 409.2 395.1 393.4 396.9C398.8 388.5 403.9 379.9 408.9 371.3zM423.3 294.8C418.6 286 413.8 277.2 408.8 268.6C403.9 260.1 398.8 251.7 393.5 243.4C409.6 245.4 425 248.1 439.4 251.4C434.8 266.2 429.4 280.6 423.3 294.8zM320.2 182.3C330.7 193.7 340.6 205.7 349.8 218.1C330 217.2 310.1 217.2 290.3 218.1C300.1 205.2 310.2 193.2 320.2 182.3zM204.2 121C221 111.2 258.3 125.2 297.6 160C300.1 162.2 302.6 164.6 305.2 167C289.7 183.7 275.4 201.5 262.3 220.1C239.7 222.1 217.3 225.6 195.1 230.5C193.8 225.4 192.7 220.2 191.6 215C182.2 166.6 188.4 130.1 204.2 121zM179.7 384.6C175.5 383.4 171.4 382.1 167.3 380.7C146 374 121.8 363.4 104.3 349.5C94.2 342.5 87.4 331.7 85.5 319.6C85.5 301.3 117.1 277.9 162.7 262C168.4 260 174.2 258.2 180 256.5C186.8 278.2 195 299.5 204.5 320.1C194.9 341 186.6 362.6 179.7 384.6zM296.3 482.6C279.8 497.7 260.7 509.7 239.9 517.9C228.8 523.2 216 523.7 204.6 519.2C188.7 510 182.1 474.7 191.1 427.2C192.2 421.6 193.4 416 194.8 410.5C217.2 415.3 239.8 418.6 262.7 420.3C275.9 439 290.4 456.9 305.9 473.7C302.7 476.8 299.5 479.8 296.3 482.6zM320.8 458.3C310.6 447.3 300.4 435.1 290.5 422C300.1 422.4 310 422.6 320 422.6C330.3 422.6 340.4 422.4 350.4 421.9C341.2 434.6 331.3 446.7 320.8 458.3zM451.5 488.3C450.6 500.5 444.6 511.9 435 519.6C419.1 528.8 385.2 516.8 348.6 485.4C344.4 481.8 340.2 477.9 335.9 473.9C351.2 457 365.3 439.1 378.1 420.3C401 418.4 423.8 414.9 446.3 409.8C447.3 413.9 448.2 418 449 422C453.9 443.6 454.7 466.1 451.5 488.3zM469.7 380.8C466.9 381.7 464.1 382.6 461.2 383.4C454.2 361.6 445.6 340.3 435.7 319.6C445.3 299.2 453.4 278.2 460.2 256.7C465.4 258.2 470.4 259.8 475.2 261.4C521.8 277.4 554.5 301.2 554.5 319.4C554.5 339 519.6 364.3 469.7 380.8zM320 365.8C345.3 365.8 365.8 345.3 365.8 320C365.8 294.7 345.3 274.2 320 274.2C294.7 274.2 274.2 294.7 274.2 320C274.2 345.3 294.7 365.8 320 365.8z"/>
+                        </svg>
+                    </div>
+                    <div class="skill-name">SAP2000</div>
+                    <div class="skill-level">Menengah</div>
+                </div>
+                
+                <!-- Skill 3: OFFICE -->
+                <div class="skill-container animate__animated animate__flipInX animate__delay-3s">
+                    <div class="w-20 h-20 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors glow-effect p-4 border border-white">
+                        <img src="assets/—Pngtree—microsoft office logo icon_3588802.png" viewBox="0 0 640 640" width="40" height="40">
+                            <path fill="#ffffff" d="M544 96L480 464L256.7 544L64 464L83.6 369.2L165.6 369.2L157.6 409.8L274 454.2L408.1 409.8L426.9 312.7L93.5 312.7L109.5 230.7L443.2 230.7L453.7 178L120.3 178L136.6 96L544 96z"/>
+                        </svg>
+                    </div>
+                    <div class="skill-name">MS Office</div>
+                    <div class="skill-level">Mahir</div>
+                </div>
+                
+                <!-- Skill 4: Revit -->
+                <div class="skill-container animate__animated animate__flipInX animate__delay-4s">
+                    <div class="w-20 h-20 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors glow-effect p-4 border border-white">
+                        <img src="assets/sk.png" viewBox="0 0 640 640" width="40" height="40">
+                            <path fill="#ffffff" d="M568.6 179.8C568.5 179.6 568.4 179.3 568.3 179.1C568.2 178.7 568 178.3 567.8 177.9C567.6 177.7 567.5 177.4 567.3 177.2C567.1 176.9 566.8 176.6 566.6 176.3C566.4 176.1 566.1 175.9 565.8 175.7C565.5 175.5 565.2 175.2 564.9 175L468.6 119.5C467.4 118.8 466 118.4 464.6 118.4C463.2 118.4 461.8 118.8 460.6 119.5L364.3 175C364 175.2 363.7 175.4 363.4 175.7C363.1 175.9 362.9 176.1 362.6 176.3C362.3 176.6 362.1 176.9 361.9 177.2C361.7 177.4 361.5 177.6 361.4 177.9C361.2 178.3 361 178.7 360.9 179.1C360.8 179.3 360.7 179.5 360.6 179.8C360.4 180.5 360.3 181.2 360.3 181.9L360.3 287.1L280.1 333.3L280.1 127.4C280.1 126.7 280 126 279.8 125.3C279.7 125.1 279.6 124.9 279.5 124.6C279.4 124.2 279.2 123.8 279 123.4C278.9 123.1 278.6 122.9 278.5 122.7C278.3 122.4 278 122.1 277.8 121.8C277.6 121.6 277.3 121.4 277 121.2C276.7 121 276.4 120.7 276.1 120.5L179.8 65.1C178.6 64.4 177.2 64 175.8 64C174.4 64 173 64.4 171.8 65.1L75.5 120.5C75.2 120.7 74.9 120.9 74.6 121.2C74.3 121.4 74.1 121.6 73.8 121.8C73.5 122.1 73.3 122.4 73.1 122.7C72.9 123 72.7 123.2 72.5 123.4C72.3 123.8 72.1 124.2 72 124.6C71.9 124.8 71.8 125 71.7 125.3C71.5 126 71.4 126.7 71.4 127.4L71.4 457.1C71.4 458.5 71.8 459.9 72.5 461.1C73.2 462.3 74.2 463.3 75.4 464L268 574.9C268.4 575.1 268.9 575.3 269.3 575.4C269.5 575.5 269.7 575.6 269.9 575.7C271.2 576.1 272.7 576.1 274 575.7C274.2 575.6 274.4 575.5 274.6 575.5C275.1 575.3 275.6 575.2 276 574.9L468.6 464.1C469.8 463.4 470.8 462.4 471.5 461.2C472.2 460 472.6 458.6 472.6 457.2L472.6 351.9L564.8 298.8C566 298.1 567 297.1 567.7 295.8C568.4 294.5 568.8 293.2 568.8 291.8L568.8 182C568.8 181.3 568.7 180.6 568.6 179.9zM175.8 81.3L256 127.4L175.8 173.6L95.6 127.4L175.8 81.2zM264 141.3L264 342.6C230.8 361.7 204.1 377.1 183.8 388.8L183.8 187.5C217 168.4 243.7 153 264 141.3zM264 554.1L87.5 452.5L87.5 141.3C107.8 153 134.6 168.4 167.7 187.5L167.7 402.7C167.7 403 167.8 403.3 167.8 403.6C167.8 404 167.9 404.4 168 404.8C168.1 405.1 168.2 405.4 168.4 405.7C168.5 406 168.7 406.4 168.8 406.7C169 407 169.2 407.2 169.4 407.5C169.6 407.8 169.8 408.1 170.1 408.3C170.3 408.5 170.6 408.7 170.9 408.9C171.2 409.1 171.5 409.4 171.8 409.6L264 461.8L264.1 554.2zM272 447.9L192 402.6C246.7 371.1 305.5 337.3 368.3 301.1L448.4 347.2C419 364 360.2 397.5 272 447.9zM456.5 452.5L280 554.1L280 461.8C381.4 404 440.2 370.4 456.5 361L456.5 452.4zM456.5 333.4C436.2 321.8 409.4 306.4 376.3 287.3L376.3 195.9C396.6 207.6 423.4 223 456.5 242.1L456.5 333.4zM464.5 228.1L384.3 181.9L464.5 135.7L544.7 181.8L464.5 228zM472.5 333.4L472.5 242.1C505.7 223 532.5 207.6 552.8 195.9L552.8 287.3L472.5 333.5z"/>
+                        </svg>
+                    </div>
+                    <div class="skill-name">Revit</div>
+                    <div class="skill-level">Pemula</div>
+                </div>
+                
+                <!-- Skill 5: SketchUp -->
+                <div class="skill-container animate__animated animate__flipInX animate__delay-5s">
+                    <div class="w-20 h-20 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors glow-effect p-4 border border-white">
+                        <img src="assets/485519182a9287b7926afd3e21d26c30.png" viewBox="0 0 640 640" width="40" height="40">
+                            <path fill="#ffffff" d="M96 96L96 544L544 544L544 96L96 96zM339.8 445.4C339.8 489 314.2 508.9 276.9 508.9C243.2 508.9 223.7 491.5 213.7 470.4L248 449.7C254.6 461.4 260.6 471.3 275.1 471.3C288.9 471.3 297.7 465.9 297.7 444.8L297.7 301.7L339.8 301.7L339.8 445.4zM439.4 508.9C400.3 508.9 375 490.3 362.7 465.9L397 446.1C406 460.8 417.8 471.7 438.5 471.7C455.9 471.7 467.1 463 467.1 450.9C467.1 436.5 455.7 431.4 436.4 422.9L425.9 418.4C395.5 405.5 375.4 389.2 375.4 354.9C375.4 323.3 399.5 299.3 437 299.3C463.8 299.3 483 308.6 496.8 333L464 354C456.8 341.1 449 336 436.9 336C424.6 336 416.8 343.8 416.8 354C416.8 366.6 424.6 371.7 442.7 379.6L453.2 384.1C489 399.4 509.1 415.1 509.1 450.3C509.1 488.1 479.3 508.9 439.4 508.9z"/>
+                        </svg>
+                    </div>
+                    <div class="skill-name">SketchUp</div>
+                    <div class="skill-level">Menengah</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="project" class="py-16 sm:py-20 section-bg animate__animated animate__fadeInUp">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 sm:mb-12 gap-4">
+                <div>
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Pengalaman</h2>
+                    <p class="text-gray-400">
+                        Beberapa projek yang dikerjakan dan pengalaman Kerja (magang).
+                    </p>
+                </div>
+                <button class="text-white hover:text-gray-300 transition-colors whitespace-nowrap">
+                    See More Work →
+                </button>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-6 lg:gap-8">
+                <div class="group cursor-pointer animate__animated animate__zoomIn animate__delay-1s">
+                    <div
+                        class="bg-gray-800 rounded-md overflow-hidden mb-4 hover:transform hover:scale-105 transition-transform glow-effect h-80">
+                        <img src="img/TA.jpg"
+                            alt="CMS Center For Migration Studies" class="w-full  object-cover">
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-semibold">Tugas Akhir | Analisis Pengaruh Jumlah Tumbukan Pada Campuran AC-WC Terhadap Nilai Marshall</h3>
+                </div>
+                <div class="group cursor-pointer animate__animated animate__zoomIn animate__delay-2s">
+                    <div
+                        class="bg-gray-800 rounded-md overflow-hidden mb-4 hover:transform hover:scale-105 transition-transform glow-effect h-80">
+                        <img src="img/ihmmm.jpg"
+                            alt="Voces de la Frontera" class="w-full  object-cover">
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-semibold">Internship | PT Itci Hutani Manunggal Divisi Road Maintenance</h3>
+                </div>
+                <div class="group cursor-pointer animate__animated animate__zoomIn animate__delay-3s">
+                    <div
+                        class="bg-gray-800 rounded-md overflow-hidden mb-4 hover:transform hover:scale-105 transition-transform glow-effect h-80">
+                        <img src="img/atcd.jpg"
+                            alt="ITPI In The Public Interest" class="w-full  object-cover">
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-semibold">AutoCAD</h3>
+                </div>
+                <div class="group cursor-pointer animate__animated animate__zoomIn animate__delay-4s">
+                    <div
+                        class="bg-gray-800 rounded-md overflow-hidden mb-4 hover:transform hover:scale-105 transition-transform glow-effect h-80">
+                        <img src="img/skcp.jpg"
+                            alt="CHANGEWIRE" class="w-full  object-cover">
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-semibold">SketchUp</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <section id="contact" class="py-16 sm:py-20 relative animate__animated animate__fadeInUp">
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-center">Selengkapnya Tentang Saya</h2>
+            <p class="text-gray-400 text-center mb-8 sm:mb-12">
+                Untuk lebih lanjut tentang saya, bisa download file dibawah ini
+            </p>
+            
+            <!-- Download Section -->
+            <div class="download-section animate__animated animate__fadeInDown">
+                <h3 class="download-title">Download My Documents</h3>
+                <div class="download-buttons">
+                    <a href="doc/Curriculum Vitae.pdf" class="download-btn" download>
+                        <i class="fas fa-file-pdf"></i>
+                        Download CV
+                    </a>
+                    <a href="doc/Portofolio Ridho.pdf" class="download-btn secondary" download>
+                        <i class="fas fa-briefcase"></i>
+                        Download Portfolio
+                    </a>
+                </div>
+            </div>
+            
+    </section>
+
+    <footer class="py-8 sm:py-12 border-t border-gray-800 animate__animated animate__fadeInUp">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p class="text-gray-400 text-sm sm:text-base">© 2025 Ridho Hafidz. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
